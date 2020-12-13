@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  pointManager: {fileID: 8174689474783563449, guid: 622f467274d5db44fbc3b8ec2dc36e6f,
+  pointManager: {fileID: 4984548309493959318, guid: 622f467274d5db44fbc3b8ec2dc36e6f,
     type: 3}
 --- !u!65 &1973607805708053581
 BoxCollider:
