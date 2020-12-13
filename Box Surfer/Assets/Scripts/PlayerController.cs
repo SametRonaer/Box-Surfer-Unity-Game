@@ -84,13 +84,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if(xPosition > -5)
+            if(xPosition > -3.8f)
             {
                 transform.position -= new Vector3(horizontalConstantSpeed, 0, 0);
             }
         } 
         else if(Input.GetKey(KeyCode.RightArrow)){
-            if(xPosition < 5)
+            if(xPosition < 3.8f)
             {
                 transform.position += new Vector3(horizontalConstantSpeed, 0, 0);
             }

@@ -12,6 +12,7 @@ TagManager:
   - NewStep
   - OldStep
   - Point
+  - SkippedFinish
   layers:
   - Default
   - TransparentFX
