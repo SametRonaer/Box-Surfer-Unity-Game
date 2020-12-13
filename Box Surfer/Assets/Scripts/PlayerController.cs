@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     float xPosition;
     Rigidbody rb;
     float firstFinger, lastFinger , distanceBetweenTouches = 0;
+    [SerializeField] float borderOfRoad = 3.8f;
     private void Start()
     {
      
@@ -63,13 +64,13 @@ public class PlayerController : MonoBehaviour
 
         if (isLeft)
         {
-            if(xPosition > -5)
+            if(xPosition > -borderOfRoad)
             {
                 transform.position -= new Vector3(horizontalConstantSpeed, 0, 0);
             }
         } 
         else if(!isLeft){
-            if(xPosition < 5)
+            if(xPosition < borderOfRoad)
             {
                 transform.position += new Vector3(horizontalConstantSpeed, 0, 0);
             }
@@ -84,13 +85,13 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if(xPosition > -3.8f)
+            if(xPosition > -borderOfRoad)
             {
                 transform.position -= new Vector3(horizontalConstantSpeed, 0, 0);
             }
         } 
         else if(Input.GetKey(KeyCode.RightArrow)){
-            if(xPosition < 3.8f)
+            if(xPosition < borderOfRoad)
             {
                 transform.position += new Vector3(horizontalConstantSpeed, 0, 0);
             }

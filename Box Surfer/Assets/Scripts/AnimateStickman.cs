@@ -43,22 +43,14 @@ public class AnimateStickman : MonoBehaviour
             pointManager.GetComponent<PointManager>().IncreasePoint();
             Destroy(other.gameObject);
         }
-
-      
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        DetectVictory(collision);
-    }
-
-    private void DetectVictory(Collision collision)
-    {
-        if (collision.gameObject.tag == "Finish")
+        if(collision.gameObject.tag == "Finish")
         {
-            if (gameObject.tag == "Player")
+            if(gameObject == player)
             {
-                print("Victory");
                 player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetTrigger("victory");
             }
             collision.gameObject.tag = "SkippedFinish";
