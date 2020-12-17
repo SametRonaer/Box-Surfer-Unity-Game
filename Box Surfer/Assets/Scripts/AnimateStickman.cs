@@ -7,7 +7,7 @@ public class AnimateStickman : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float speed = 5;
-    [SerializeField] GameObject pointManager;
+    GameObject pointManager;
     Vector3 stepPosition;
     GameObject player;
 
@@ -17,7 +17,8 @@ public class AnimateStickman : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Physics.gravity = new Vector3(0, -500.0F, 0);
         player = GameObject.FindGameObjectWithTag("Player");
-        
+        pointManager = GameObject.FindGameObjectWithTag("PointManager");
+        print(Screen.currentResolution);
 
     }
 

@@ -1,4 +1,4 @@
-﻿Shader "Holistic/ToonRamp" {
+﻿Shader "CellShader/ToonRamp" {
 	Properties 
 	{
 		_Color  ("Color", Color) = (1,1,1,1)
@@ -7,10 +7,13 @@
 	
 	SubShader 
 	{
-		
+	    Fog {Density 10}
+
+
 		CGPROGRAM
 		#pragma surface surf ToonRamp
-
+		
+		
 		float4 _Color;
 		sampler2D _RampTex;
 		
