@@ -9,24 +9,30 @@ public class PointManager : MonoBehaviour
  [SerializeField] float pointCount;
  [SerializeField] GameObject point;
  [SerializeField] GameObject score;
+ [SerializeField] AudioClip audioClip;
+ AudioSource audioSource;
  Animator anim;
  Text text;
-
-    private void Update()
-    {
-        PointEffect();
-    }
 
     private void Start()
     {
         pointCount = 0;
         anim = point.GetComponent<Animator>();
         text = score.GetComponent<Text>();
+        audioSource = GetComponent<AudioSource>();
     }
+
+    private void Update()
+    {
+        PointEffect();
+    }
+
+   
 
     public void IncreasePoint()
     {
         pointCount++;
+        audioSource.PlayOneShot(audioClip);
         text.text = pointCount.ToString();
         point.SetActive(true);
     }

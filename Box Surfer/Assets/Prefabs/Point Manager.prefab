@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointCount: 0
+  point: {fileID: 0}
+  score: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9bea7ee0d8f3a5b49b91f97ffa66b790, type: 3}
