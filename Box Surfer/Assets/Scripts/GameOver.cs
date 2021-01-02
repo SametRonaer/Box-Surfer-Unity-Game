@@ -5,10 +5,12 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     GameObject player;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
      player= GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
+     audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,8 +24,10 @@ public class GameOver : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            print("Finish");
+           
             player.GetComponent<Animator>().SetTrigger("fall");
+            audioSource.Play();
+
         }
 
         if(other.gameObject.tag == "Step")

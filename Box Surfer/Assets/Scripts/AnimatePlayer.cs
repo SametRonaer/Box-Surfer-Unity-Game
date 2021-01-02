@@ -6,6 +6,7 @@ public class AnimatePlayer : MonoBehaviour
 {
     GameObject player, particles;
     Animator anim;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,8 @@ public class AnimatePlayer : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).gameObject;
         particles = GameObject.FindGameObjectWithTag("Player").transform.GetChild(1).gameObject;
         anim = player.GetComponent<Animator>();
+        
+        
        
     }
 
